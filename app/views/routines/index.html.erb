@@ -1,0 +1,48 @@
+
+
+
+<div class="container">
+	
+<div class="row">
+	
+Choose what exercise group you'd like to work on today.
+
+<p>
+	
+You can choose exercises by muscle groups. <p></p>
+For Abs, enter 1<p></p>
+For triceps, enter 2<p></p>
+For Calves, enter 3<p></p>
+
+
+</p>
+
+<div class="panel-body">
+        <form action="/show_exercise" method="post" class="form-horizontal">
+          <!-- Hidden input for authenticity token to protect from forgery -->
+          <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>">
+
+
+
+
+
+          <!-- Label and input for goaloneliner -->
+          <div class="form-group">
+            <label for="exercise" class="col-sm-2 control-label">
+              Choose the muscle group you'd like to exercise
+            </label>
+
+            <% mymusclegroup="0" %>
+
+            <div class="col-sm-10">
+              <input type="text" id="exercise" name="exercise" placeholder="Insert # of Muscle Group here" class="form-control" value="<%= @exercise %>">
+            </div>
+          </div>
+
+</div>
+
+</form>
+</div>
+
+
+</div>
